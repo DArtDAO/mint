@@ -23,9 +23,9 @@ const theme = extendTheme ({
       body: {
         bg: '#00c2cb',
       },
-      h1, h2, h3, h4, h5, p "{
+      h1: {
         font-family: monospace,
-      }
+      },
     },
   },
 })
