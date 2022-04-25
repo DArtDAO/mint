@@ -1,5 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import { ExtendTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 import {
   ArbitrumRinkeby,
   ChainId,
@@ -16,7 +16,7 @@ import type { AppProps } from 'next/app'
 import React from 'react'
 import { CHAIN_ID, multicallOnLocalhost } from '../config'
 
-const theme = extendTheme({
+const theme: extendTheme ={
   styles: {
     global: {
       // styles for the `body`
@@ -26,7 +26,7 @@ const theme = extendTheme({
       },
     },
   },
-})
+}
 
 const config: Config = {
   readOnlyChainId: CHAIN_ID,
@@ -61,9 +61,9 @@ const config: Config = {
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <DAppProvider config={config}>
-      <ExtendTheme>
+      <extendTheme = {theme}>
         <Component {...pageProps} />
-      </ExtendTheme>
+      </extendTheme>
     </DAppProvider>
   )
 }
