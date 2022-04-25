@@ -22,8 +22,10 @@ const theme = extendTheme ({
       // styles for the `body`
       body: {
         bg: '#00c2cb',
-        font: 'monospace',
       },
+      h1, h2, h3, h4, h5, p "{
+        font-family: monospace,
+      }
     },
   },
 })
