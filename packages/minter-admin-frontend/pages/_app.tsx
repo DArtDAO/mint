@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 import {
   ArbitrumRinkeby,
   ChainId,
@@ -14,6 +14,18 @@ import {
 import type { AppProps } from 'next/app'
 import React from 'react'
 import { CHAIN_ID, multicallOnLocalhost } from '../config'
+
+const theme = extendTheme({
+  styles: {
+    global: {
+      // styles for the `body`
+      body: {
+        bg: '#00c2cb',
+        font: bold, "Courier New", monospace,
+      },
+    },
+  },
+})
 
 const config: Config = {
   readOnlyChainId: CHAIN_ID,
@@ -48,9 +60,9 @@ const config: Config = {
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <DAppProvider config={config}>
-      <ChakraProvider>
+      <extendTheme>
         <Component {...pageProps} />
-      </ChakraProvider>
+      </extendTheme>
     </DAppProvider>
   )
 }
