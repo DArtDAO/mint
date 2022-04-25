@@ -61,9 +61,9 @@ const config: Config = {
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <DAppProvider config={config}>
-      <theme>
+      <extendTheme>
         <Component {...pageProps} />
-      </theme>
+      </extendTheme>
     </DAppProvider>
   )
 }
