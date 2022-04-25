@@ -22,7 +22,7 @@ const theme = extendTheme ({
       // styles for the `body`
       body: {
         bg: '#00c2cb',
-        font: "Courier New", monospace,
+        font-family: "Courier New", monospace,
       },
     },
   },
