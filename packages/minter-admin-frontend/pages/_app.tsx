@@ -24,7 +24,7 @@ const theme = extendTheme ({
         bg: '#00c2cb',
       },
       h1: {
-        font: 'Courier New', monospace
+        font: 'Courier New', Courier, monospace
       },
     },
   },
