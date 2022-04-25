@@ -1,3 +1,4 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import {
   ArbitrumRinkeby,
@@ -60,9 +61,11 @@ const config: Config = {
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <DAppProvider config={config}>
-      <extendTheme>
-        <Component {...pageProps} />
-      </extendTheme>
+      <ChakraProvider>
+        <extendTheme>
+          <Component {...pageProps} />
+        </extendTheme>
+      </ChakraProvider>
     </DAppProvider>
   )
 }
