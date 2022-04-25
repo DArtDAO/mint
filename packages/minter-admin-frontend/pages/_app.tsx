@@ -16,7 +16,7 @@ import type { AppProps } from 'next/app'
 import React from 'react'
 import { CHAIN_ID, multicallOnLocalhost } from '../config'
 
-const ExtendTheme = extendTheme ({
+const theme = extendTheme ({
   styles: {
     global: {
       // styles for the `body`
@@ -58,12 +58,12 @@ const config: Config = {
   },
 }
 
-const MyApp = ({ Component, pageProps, extendTheme }: AppProps): JSX.Element => {
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <DAppProvider config={config}>
-      <extendTheme>
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
-      </extendTheme>
+      </ChakraProvider>
     </DAppProvider>
   )
 }
