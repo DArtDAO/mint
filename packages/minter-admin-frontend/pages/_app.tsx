@@ -22,7 +22,7 @@ const theme = extendTheme({
       // styles for the `body`
       body: {
         bg: '#00c2cb',
-        font: "Courier New", monospace,
+        font-family: "Courier New", monospace,
       },
     },
   },
@@ -62,7 +62,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <DAppProvider config={config}>
       <ChakraProvider>
-        <extendTheme>
+        <extendTheme = {theme}>
           <Component {...pageProps} />
         </extendTheme>
       </ChakraProvider>
