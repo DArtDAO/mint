@@ -2,7 +2,7 @@ export const NavbarLinks = [
   {
     href: 'https://dartdao.com',
     label: 'Home',
-  }
+  },
   {
     href: '/',
     label: 'Mint',
